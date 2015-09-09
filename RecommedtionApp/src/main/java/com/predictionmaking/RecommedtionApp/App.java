@@ -30,7 +30,7 @@ public class App
     	UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
     	UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, similarity, model);
     	UserBasedRecommender recommender = new GenericUserBasedRecommender(model, neighborhood, similarity);
-    	List<RecommendedItem> recommendations = recommender.recommend(4, 3);
+    	List<RecommendedItem> recommendations = recommender.recommend(2, 3);
     	//Iterator<RecommendedItem> rcommedts = recommendations
     	for (RecommendedItem recommendation : recommendations) {
     	  System.out.println(recommendation);
